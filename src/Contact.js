@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const Contact = () => {
@@ -33,7 +34,7 @@ const Contact = () => {
     }
   `;
 
-  return <Wrapper></Wrapper>;
+  return  <h1> HI </h1>;
 };
 
 export default Contact;
