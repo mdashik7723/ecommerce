@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Cart = () => {
-  return <Wrapper></Wrapper>;
+    return <Wrapper></Wrapper>;
 };
 
 const Wrapper = styled.section`
@@ -17,13 +17,16 @@ const Wrapper = styled.section`
     text-align: center;
     align-items: center;
   }
+
   .cart-heading {
     text-align: center;
     text-transform: uppercase;
   }
+
   hr {
     margin-top: 1rem;
   }
+
   .cart-item {
     padding: 3.2rem 0;
     display: flex;
@@ -43,13 +46,16 @@ const Wrapper = styled.section`
       height: 8rem;
       border-radius: 50%;
     }
+
     h2 {
       font-size: 2.4rem;
     }
   }
+
   .cart-user--name {
     text-transform: capitalize;
   }
+
   .cart-image--name {
     /* background-color: red; */
     align-items: center;
@@ -58,6 +64,7 @@ const Wrapper = styled.section`
     grid-template-columns: 0.4fr 1fr;
     text-transform: capitalize;
     text-align: left;
+
     img {
       max-width: 5rem;
       height: 5rem;
@@ -105,7 +112,7 @@ const Wrapper = styled.section`
 
     .amount-style {
       font-size: 2.4rem;
-      color: ${({ theme }) => theme.colors.btn};
+      color: ${({theme}) => theme.colors.btn};
     }
   }
 
@@ -131,6 +138,7 @@ const Wrapper = styled.section`
       gap: 1.8rem;
       padding: 3.2rem;
     }
+
     div {
       display: flex;
       gap: 3.2rem;
@@ -143,14 +151,15 @@ const Wrapper = styled.section`
 
     div p:last-child {
       font-weight: bold;
-      color: ${({ theme }) => theme.colors.heading};
+      color: ${({theme}) => theme.colors.heading};
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+  @media (max-width: ${({theme}) => theme.media.mobile}) {
     .grid-five-column {
       grid-template-columns: 1.5fr 1fr 0.5fr;
     }
+
     .cart-hide {
       display: none;
     }

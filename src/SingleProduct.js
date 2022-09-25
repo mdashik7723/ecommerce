@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const SingleProduct = () => {
-    return(
-            <h1> Single Page </h1>
+    return (
+        <h1> Single Page </h1>
 
     )
 }
@@ -12,6 +12,7 @@ const Wrapper = styled.section`
   .container {
     padding: 9rem 0;
   }
+
   .product-data {
     display: flex;
     flex-direction: column;
@@ -37,6 +38,7 @@ const Wrapper = styled.section`
           height: 4rem;
           padding: 0.6rem;
         }
+
         p {
           font-size: 1.4rem;
           padding-top: 0.4rem;
@@ -47,9 +49,11 @@ const Wrapper = styled.section`
     .product-data-price {
       font-weight: bold;
     }
+
     .product-data-real-price {
-      color: ${({ theme }) => theme.colors.btn};
+      color: ${({theme}) => theme.colors.btn};
     }
+
     .product-data-info {
       display: flex;
       flex-direction: column;
@@ -76,7 +80,7 @@ const Wrapper = styled.section`
     align-items: center;
   }
 
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+  @media (max-width: ${({theme}) => theme.media.mobile}) {
     padding: 0 2.4rem;
   }
 `;

@@ -1,11 +1,12 @@
 import React from "react";
 
-const About =()=> {
+const About = () => {
 
-    return(
+    return (
         <>
 
-            <div> about </div>;
+            <div> about</div>
+            ;
         </>
     )
 };
