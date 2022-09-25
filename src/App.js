@@ -7,11 +7,13 @@ import Contact from "./Contact";
 import SingleProduct from "./SingleProduct";
 import Cart from "./Cart";
 import ErrorPage from "./ErrorPage";
+import {GlobalStyle} from "./GlobalStyle";
 
 const App = () => {
     return (
         <>
             <Router>
+                <GlobalStyle/>
                 <Routes>
                     <Route path="/" element= { <Home/> } />
                     <Route path="/about" element= { <About/> } />
