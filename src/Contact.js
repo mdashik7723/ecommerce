@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Contact = () => {
     const Wrapper = styled.section`
+      height: 100vh;
     padding: 9rem 0 5rem 0;
     text-align: center;
     .container {
