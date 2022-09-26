@@ -7,7 +7,7 @@ const About = () => {
 
 const Wrapper = styled.section`
   height: 100vh;
-  background-color: ${({ theme }) => theme.colors.bg};
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export default About;
