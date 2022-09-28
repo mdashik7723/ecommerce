@@ -6,7 +6,7 @@ const About = () => {
         name: "AB Ecommerce",
     };
 
-    return <HeroSection myData={data} />;
+    return <HeroSection myData={data}/>;
 };
 
 export default About;

@@ -1,10 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import styled from "styled-components";
-import { Button } from "../styles/Button";
+import {Button} from "../styles/Button";
 
-const HeroSection = ({ myData }) => {
-    const { name } = myData;
+const HeroSection = ({myData}) => {
+    const {name} = myData;
 
     return (
         <Wrapper>
@@ -40,22 +40,27 @@ const HeroSection = ({ myData }) => {
 
 const Wrapper = styled.section`
   padding: 12rem 0;
+
   img {
     min-width: 10rem;
     height: 10rem;
   }
+
   .hero-section-data {
     p {
       margin: 2rem 0;
     }
+
     h1 {
       text-transform: capitalize;
       font-weight: bold;
     }
+
     .intro-data {
       margin-bottom: 0;
     }
   }
+
   .hero-section-image {
     width: 100%;
     height: auto;
@@ -63,8 +68,10 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
   }
+
   figure {
     position: relative;
+
     &::after {
       content: "";
       width: 60%;
@@ -76,14 +83,17 @@ const Wrapper = styled.section`
       z-index: -1;
     }
   }
+
   .img-style {
     width: 100%;
     height: auto;
   }
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+
+  @media (max-width: ${({theme}) => theme.media.mobile}) {
     .grid {
       gap: 10rem;
     }
+
     figure::after {
       content: "";
       width: 50%;
