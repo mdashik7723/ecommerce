@@ -22,7 +22,6 @@ const Wrapper = styled.section`
     text-align: center;
     text-transform: uppercase;
   }
-
   hr {
     margin-top: 1rem;
   }
@@ -188,5 +187,4 @@ const Wrapper = styled.section`
     }
   }
 `;
-
 export default Cart;
