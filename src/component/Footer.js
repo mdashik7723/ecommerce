@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import { Button } from "../styles/Button";
-import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
+import {NavLink} from "react-router-dom";
+import {Button} from "../styles/Button";
+import {FaDiscord, FaInstagram, FaYoutube} from "react-icons/fa";
 
 const Footer = () => {
-    return (
-        <>
+    return (<>
             <Wrapper>
                 <section className="contact-short">
                     <div className="grid grid-two-column">
@@ -33,25 +32,24 @@ const Footer = () => {
                         <div className="footer-subscribe">
                             <h3>Subscribe to get important updates</h3>
                             <form action="#">
-                                <input type="email" name="email" placeholder="YOUR E-MAIL" />
-
-                                <input type="submit" value="subscribe" />
+                                <input type="email" name="email" placeholder="YOUR E-MAIL"/>
+                                <input type="submit" value="subscribe"/>
                             </form>
                         </div>
                         <div className="footer-social">
                             <h3>Follow Us</h3>
                             <div className="footer-social--icons">
                                 <div>
-                                    <FaDiscord className="icons" />
+                                    <FaDiscord className="icons"/>
                                 </div>
                                 <div>
-                                    <FaInstagram className="icons" />
+                                    <FaInstagram className="icons"/>
                                 </div>
                                 <div>
                                     <a
                                         href="https://www.youtube.com/channel/UCkJDZQtqRQC-ee9nEhvaWbg"
                                         target="_blank">
-                                        <FaYoutube className="icons" />
+                                        <FaYoutube className="icons"/>
                                     </a>
                                 </div>
                             </div>
@@ -63,7 +61,7 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-bottom--section">
-                        <hr />
+                        <hr/>
                         <div className="container grid grid-two-column ">
                             <p>
                                 @{new Date().getFullYear()} Ashik.All Rights Reserved
@@ -76,46 +74,53 @@ const Footer = () => {
                     </div>
                 </footer>
             </Wrapper>
-        </>
-    );
+        </>);
 };
 
 const Wrapper = styled.section`
   .iSIFGq {
     margin: 0;
   }
+
   .contact-short {
     max-width: 60vw;
     margin: auto;
     padding: 5rem 10rem;
-    background-color: ${({ theme }) => theme.colors.bg};
+    background-color: ${({theme}) => theme.colors.bg};
     border-radius: 1rem;
-    box-shadow: ${({ theme }) => theme.colors.shadowSupport};
+    box-shadow: ${({theme}) => theme.colors.shadowSupport};
     transform: translateY(50%);
+
     .grid div:last-child {
       justify-self: end;
       align-self: center;
     }
   }
+
   footer {
     padding: 14rem 0 9rem 0;
-    background-color: ${({ theme }) => theme.colors.footer_bg};
+    background-color: ${({theme}) => theme.colors.footer_bg};
+
     h3 {
-      color: ${({ theme }) => theme.colors.hr};
+      color: ${({theme}) => theme.colors.hr};
       margin-bottom: 2.4rem;
     }
+
     p {
-      color: ${({ theme }) => theme.colors.white};
+      color: ${({theme}) => theme.colors.white};
     }
+
     .footer-social--icons {
       display: flex;
       gap: 2rem;
+
       div {
         padding: 1rem;
         border-radius: 50%;
-        border: 2px solid ${({ theme }) => theme.colors.white};
+        border: 2px solid ${({theme}) => theme.colors.white};
+
         .icons {
-          color: ${({ theme }) => theme.colors.white};
+          color: ${({theme}) => theme.colors.white};
           font-size: 2.4rem;
           position: relative;
           cursor: pointer;
@@ -123,27 +128,33 @@ const Wrapper = styled.section`
       }
     }
   }
+
   .footer-bottom--section {
     padding-top: 9rem;
+
     hr {
       margin-bottom: 2rem;
-      color: ${({ theme }) => theme.colors.hr};
+      color: ${({theme}) => theme.colors.hr};
       height: 0.1px;
     }
   }
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+
+  @media (max-width: ${({theme}) => theme.media.mobile}) {
     .contact-short {
       max-width: 80vw;
       margin: 4.8rem auto;
       transform: translateY(0%);
       text-align: center;
+
       .grid div:last-child {
         justify-self: center;
       }
     }
+
     footer {
       padding: 9rem 0 9rem 0;
     }
+
     .footer-bottom--section {
       padding-top: 4.8rem;
     }
