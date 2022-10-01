@@ -81,7 +81,8 @@ const Wrapper = styled.section`
   .iSIFGq {
     margin: 0;
   }
-
+  
+  
   .contact-short {
     max-width: 60vw;
     margin: auto;
@@ -160,5 +161,6 @@ const Wrapper = styled.section`
     }
   }
 `;
+
 
 export default Footer;
