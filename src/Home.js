@@ -5,7 +5,7 @@ import Trusted from "./component/Trusted";
 
 const Home = () => {
     const data = {
-        name: "Ashik store",
+        name: "As Hi K store",
     };
 
     return(
@@ -15,7 +15,6 @@ const Home = () => {
             <Trusted/>
         </>
     );
-
 };
 
 export default Home;
