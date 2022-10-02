@@ -2,7 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 const Cart = () => {
-    return <Wrapper></Wrapper>;
+    return <Wrapper>
+        <div className="container">
+            <div>
+                <h3>
+                    You have total 5 product and price is 255$.
+                </h3>
+
+            </div>
+        </div>
+    </Wrapper>;
 };
 
 const Wrapper = styled.section`
@@ -11,7 +20,10 @@ const Wrapper = styled.section`
   .grid-four-column {
     grid-template-columns: repeat(4, 1fr);
   }
-
+.container{
+  padding: 9rem 0;
+  text-align: center;
+}
   .grid-five-column {
     grid-template-columns: repeat(4, 1fr) 0.3fr;
     text-align: center;
@@ -49,6 +61,9 @@ const Wrapper = styled.section`
     h2 {
       font-size: 2.4rem;
     }
+  }
+  h3{
+    font-size: 2rem;
   }
 
   .cart-user--name {
