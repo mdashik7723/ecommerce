@@ -38,14 +38,13 @@ const Nav = () => {
         cursor: pointer;
         border: none;
       }
-
       .mobile-nav-icon[name="close-outline"] {
         display: none;
-      }
+      };
 
       .close-outline {
         display: none;
-      }
+      };
 
       .cart-trolley--link {
         position: relative;
@@ -122,7 +121,7 @@ const Nav = () => {
           transform: translateX(100%);
           /* transform-origin: top; */
           transition: all 3s linear;
-        }
+        };
 
         .active .navbar-lists {
           visibility: visible;
@@ -134,8 +133,8 @@ const Nav = () => {
 
           .navbar-link {
             font-size: 4.2rem;
-          }
-        }
+          };
+        };
 
         .cart-trolley--link {
           position: relative;
@@ -143,14 +142,14 @@ const Nav = () => {
           .cart-trolley {
             position: relative;
             font-size: 5.2rem;
-          }
+          };
 
           .cart-total--item {
             width: 4.2rem;
             height: 4.2rem;
             font-size: 2rem;
-          }
-        }
+          };
+        };
 
         .user-logout,
         .user-login {
