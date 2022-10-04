@@ -12,12 +12,11 @@ const AppProvider = ({children}) => {
         </>
     )
 };
+
 //custom hook
 
 const useProductContext = () => {
     return useContext(AppContext);
 };
 
-
-export {AppProvider};
-export {AppContext, useProductContext};
+export { AppProvider, AppContext, useProductContext };
