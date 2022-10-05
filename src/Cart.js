@@ -5,9 +5,9 @@ const Cart = () => {
     return <Wrapper>
         <div className="container">
             <div>
-                <h3>
+                <h2>
                     You have total 5 product and price is 255$.
-                </h3>
+                </h2>
 
             </div>
         </div>
