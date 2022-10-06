@@ -1,4 +1,3 @@
-import React from "react";
 const ProductReducer = (state, action) => {
     // if (action.type === "SET_LOADING") {
     //   return {
