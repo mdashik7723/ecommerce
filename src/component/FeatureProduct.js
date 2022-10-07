@@ -59,7 +59,7 @@ const Wrapper = styled.section`
     }
 
     &:hover img {
-      transform: scale(1.2);
+      transform: scale(1);
     }
 
     img {
