@@ -1,3 +1,5 @@
+import React from "react";
+
 const FormatPrice = ({ price }) => {
     return Intl.NumberFormat("en-IN", {
         style: "currency",
