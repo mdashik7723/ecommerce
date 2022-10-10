@@ -1,26 +1,26 @@
-import React, {useContext, useEffect, useReducer} from "react";
-import {createContext} from "react";
+import React from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import reducer from "../reducer/productReducer";
-import {type} from "@testing-library/user-event/dist/type";
 
 const AppContext = createContext();
 
-const API = "https://api.pujakaitem.com/api/products"
+const API = "https://api.pujakaitem.com/api/products";
 
 const initialState = {
     isLoading: false,
-    isError:false,
-    products:[],
+    isError: false,
+    products: [],
     featureProducts: [],
     isSingleLoading: false,
     singleProduct: {},
 };
-const AppProvider = ({children}) => {
 
-    const [state, dispatch ] = useReducer(reducer, initialState);
+const AppProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(reducer, initialState);
+
     const getProducts = async (url) => {
-        dispatch({type: "SET_LOADING"});
+        dispatch({ type: "SET_LOADING" });
         try {
             const res = await axios.get(url);
             const products = await res.data;
@@ -30,35 +30,31 @@ const AppProvider = ({children}) => {
         }
     };
 
-    // my 2nd api call singla product
+    // my 2nd api call for single product
 
     const getSingleProduct = async (url) => {
-        dispatch({type: "SET_SINGLE_LOADING"});
+        dispatch({ type: "SET_SINGLE_LOADING" });
         try {
             const res = await axios.get(url);
             const singleProduct = await res.data;
-            dispatch({ type: "SET_SINGLE_PRODUCT", payload: singleProduct});
-
-        }catch (error){
-            dispatch({type: "SET_SINGLE_ERROR"});
+            dispatch({ type: "SET_SINGLE_PRODUCT", payload: singleProduct });
+        } catch (error) {
+            dispatch({ type: "SET_SINGLE_ERROR" });
         }
     };
 
     useEffect(() => {
         getProducts(API);
-    },[]);
+    }, []);
 
-    return(
-        <>
-        <AppContext.Provider value={{...state, getSingleProduct}}>
+    return (
+        <AppContext.Provider value={{ ...state, getSingleProduct }}>
             {children}
-        </AppContext.Provider>;
-        </>
-    )
+        </AppContext.Provider>
+    );
 };
 
-//custom hook
-
+// custom hooks
 const useProductContext = () => {
     return useContext(AppContext);
 };
