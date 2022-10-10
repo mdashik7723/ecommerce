@@ -96,5 +96,4 @@ const Wrapper = styled.section`
     padding: 0 2.4rem;
   }
 `;
-
 export default SingleProduct;
