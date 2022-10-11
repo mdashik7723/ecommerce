@@ -57,7 +57,7 @@ const SingleProduct = () => {
                         <p>{stars}</p>
                         <p>{reviews} reviews</p>
                         <p className="product-data-price">
-                            MRP:
+                            BDT:
                             <del>
                                 <FormatPrice price={price + 250000} />
                             </del>
@@ -106,6 +106,7 @@ const SingleProduct = () => {
         </Wrapper>
     );
 };
+
 
 const Wrapper = styled.section`
   .container {
@@ -171,4 +172,5 @@ const Wrapper = styled.section`
     padding: 0 2.4rem;
   }
 `;
+
 export default SingleProduct;
