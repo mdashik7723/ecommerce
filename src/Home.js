@@ -8,7 +8,6 @@ const Home = () => {
     const data = {
         name: "As Hi K store",
     };
-
     return(
         <>
             <HeroSection myData={data}/>
