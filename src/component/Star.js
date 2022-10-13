@@ -30,8 +30,6 @@ const Star = ( { stars, reviews } ) => {
             </div>
         </Wrapper>
        )
-
-
 };
 
 const Wrapper = styled.section `
@@ -45,7 +43,6 @@ const Wrapper = styled.section `
       font-size: 2rem;
       color: orange;
     }
-  
   .empty-icon {
     font-size: 2.6rem;
   }
