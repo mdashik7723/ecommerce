@@ -2,6 +2,7 @@ import React from "react";
 import {AiOutlineStar, FaStar, FaStarHalf} from "react-icons/all";
 import styled from "styled-components";
 
+
 const Star = ( { stars, reviews } ) => {
 
      const ratingStar = Array.from( {length: 5}, (elem,index) => {
@@ -17,8 +18,6 @@ const Star = ( { stars, reviews } ) => {
               }
               </span>
           )
-
-
 
        });
        return(
