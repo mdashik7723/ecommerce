@@ -8,7 +8,7 @@ const Home = () => {
     const data = {
         name: "As Hi K store",
     };
-    return(
+    return (
         <>
             <HeroSection myData={data}/>
             <FeatureProduct/>

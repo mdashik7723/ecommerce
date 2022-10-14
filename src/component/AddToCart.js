@@ -9,20 +9,20 @@ const AddToCart = ({product}) => {
     const [color, setColor] = useState(colors[0]);
 
     return (< Wrapper>
-            <div className="colors">
-                <p>
-                    Colors:
-                    {colors.map((curColor, index) => {
-                        return (<button key={index}
-                                        style={{backgroundColor: curColor}}
-                                        className={color === curColor ? "btnStyle active" : "btnStyle"}
-                                        onClick={() => setColor(curColor)}>
-                                {color === curColor ? <FaCheck className="checkStyle"/> : null}
-                            </button>);
-                    })}
-                </p>
-            </div>
-        </Wrapper>);
+        <div className="colors">
+            <p>
+                Colors:
+                {colors.map((curColor, index) => {
+                    return (<button key={index}
+                                    style={{backgroundColor: curColor}}
+                                    className={color === curColor ? "btnStyle active" : "btnStyle"}
+                                    onClick={() => setColor(curColor)}>
+                        {color === curColor ? <FaCheck className="checkStyle"/> : null}
+                    </button>);
+                })}
+            </p>
+        </div>
+    </Wrapper>);
 };
 
 const Wrapper = styled.section`
