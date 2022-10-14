@@ -100,6 +100,7 @@ const SingleProduct = () => {
                                 Brand :<span> {company} </span>
                             </p>
                         </div>
+                        <hr />
                     </div>
                 </div>
             </Container>
