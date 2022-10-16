@@ -1,12 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import FilterSection from "./component/FilterSection";
+import Sort from "./component/Sort";
+import ProductList from "./component/ProductList";
 
 const Products = () => {
-    return <Wrapper> Hi I am iPhone 14 </Wrapper>;
+    return <Wrapper>
+        <div className="container grid grid-filter-column">
+            <FilterSection/>
+        </div>
+        <div className="product-view--sort">
+            <div className="sort-filter">
+                <Sort/>
+            </div>
+            <div className="main-product">
+                <ProductList/>
+            </div>
+        </div>
+    </Wrapper>;
 };
 
 const Wrapper = styled.section`
   height: 100vh;
+
   .grid-filter-column {
     grid-template-columns: 0.2fr 1fr;
   }
