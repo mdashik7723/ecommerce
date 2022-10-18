@@ -6,7 +6,6 @@ import ProductList from "./component/ProductList";
 
 const Products = () => {
 
-
     return <Wrapper>
         <div className="container grid grid-filter-column">
             <FilterSection/>
