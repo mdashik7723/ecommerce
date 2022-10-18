@@ -19,7 +19,7 @@ export const FilterContextProvider = ({children}) => {
     // to set the grid view
 
     const setGridView = () => {
-        return dispatch({ type: "SET_GRIDVIEW" });
+        return dispatch({type: "SET_GRIDVIEW"});
     }
 
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const filterReducer = (state, action) => {
 
-    switch ( action.type) {
+    switch (action.type) {
         case"LOAD_FILTER_PRODUCTS":
             return {
 

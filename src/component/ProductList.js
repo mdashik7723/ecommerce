@@ -3,11 +3,12 @@ import {useFilterContext} from "../context/filter_context";
 import GridView from "./GridView";
 
 const ProductList = () => {
-    const  { filter_products, setGridView } = useFilterContext();
+    const {filter_products, setGridView} = useFilterContext();
 
-   if (setGridView) {
-       return<GridView products = {filter_products}/>
-   };
+    if (setGridView) {
+        return <GridView products={filter_products}/>
+    }
+    ;
 
 };
 
