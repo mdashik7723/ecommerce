@@ -1,6 +1,6 @@
 import React from "react";
 import { createContext, useContext, useReducer, useEffect } from "react";
-import { useProductContext } from "./productcontext"
+import { useProductContext } from "./productcontext";
 import reducer from "../reducer/filterReducer";
 
 const FilterContext = createContext();
@@ -12,6 +12,8 @@ const initialState = {
     sorting_value: "lowest",
     filters: {
         text: "",
+        category: "all",
+        company: "all",
     },
 };
 
@@ -40,6 +42,10 @@ export const FilterContextProvider = ({ children }) => {
     const updateFilterValue = (event) => {
         let name = event.target.name;
         let value = event.target.value;
+
+        if (name === "company") {
+            value = event.target.value;
+        }
 
         return dispatch({ type: "UPDATE_FILTERS_VALUE", payload: { name, value } });
     };
