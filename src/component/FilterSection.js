@@ -60,20 +60,18 @@ const FilterSection = () => {
                             className="filter-company--select"
                             onClick={updateFilterValue}>
                         {
-                            companyData.map((curElem, index) => {
+                            companyData.map((curComp, index) => {
                                 return (
-                                    <option key={index} value={curElem}
+                                    <option key={index} value={curComp}
                                             name="company">
-                                        {curElem}
+                                        {curComp}
                                     </option>
                                 )
                             })
                         }
                     </select>
                 </form>
-
             </div>
-
         </Wrapper>
     )
 };
@@ -86,7 +84,6 @@ const Wrapper = styled.section`
 
   h3 {
     padding: 2rem 0;
-    font-size: bold;
   }
 
   .filter-search {
