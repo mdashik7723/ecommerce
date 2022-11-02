@@ -31,6 +31,7 @@ const Star = ( { stars, reviews } ) => {
        )
 };
 
+
 const Wrapper = styled.section `
 .icon-style {
   display: flex;
