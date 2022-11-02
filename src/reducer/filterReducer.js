@@ -31,25 +31,29 @@ const filterReducer = (state, action) => {
             let newSortData;
             // let tempSortProduct = [...action.payload];
 
-            const { filter_products, sorting_value } = state;
+            const {filter_products, sorting_value} = state;
             let tempSortProduct = [...filter_products];
 
             const sortingProducts = (a, b) => {
                 if (sorting_value === "lowest") {
                     return a.price - b.price;
-                };
+                }
+                ;
 
                 if (sorting_value === "highest") {
                     return b.price - a.price;
-                };
+                }
+                ;
 
                 if (sorting_value === "a-z") {
                     return a.name.localeCompare(b.name);
-                };
+                }
+                ;
 
                 if (sorting_value === "z-a") {
                     return b.name.localeCompare(a.name);
-                };
+                }
+                ;
             };
 
             newSortData = tempSortProduct.sort(sortingProducts);
@@ -60,19 +64,19 @@ const filterReducer = (state, action) => {
             };
 
         case "UPDATE_FILTERS_VALUE":
-            const { name, value } = action.payload;
+            const {name, value} = action.payload;
             return {
                 ...state,
                 filters: {
-                    ...state.filters, [name]:value,
+                    ...state.filters, [name]: value,
                 },
             };
 
         case "FILTER_PRODUCTS":
-            let { all_products } = state;
-            let  tempFilterProduct = [...all_products];
+            let {all_products} = state;
+            let tempFilterProduct = [...all_products];
 
-            const {text, category, company, color } = state.filters;
+            const {text, category, company, color} = state.filters;
             if (text) {
                 tempFilterProduct = tempFilterProduct.filter((curElem) => {
                     return curElem.name.toLowerCase().includes(text);
@@ -87,10 +91,11 @@ const filterReducer = (state, action) => {
 
             if (company !== "all") {
                 tempFilterProduct = tempFilterProduct.filter((curComp) =>
-                     curComp.company.toLowerCase() === company.toLowerCase()
+                    curComp.company.toLowerCase() === company.toLowerCase()
                 );
-            };
-            if ( color !== "all") {
+            }
+            ;
+            if (color !== "all") {
                 tempFilterProduct = tempFilterProduct.filter((curColor) =>
                     curColor.colors.includes(color)
                 );
