@@ -132,7 +132,7 @@ const Wrapper = styled.section`
 
   h3 {
     padding: 2rem 0;
-    font-size: bold;
+    //font-size: bold;
   }
 
   .filter-search {
