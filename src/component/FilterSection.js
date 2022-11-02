@@ -10,11 +10,15 @@ const FilterSection = () => {
     } = useFilterContext();
 
     // TO GET THE UNIQUE DATA OF EACH FIELD
-    const getUniqueDate = (data, property) => {
+    const getUniqueDate = (data, attr) => {
         let newVal = data.map((curElem) => {
-            return curElem [property];
+            return curElem [attr];
         });
-        return (newVal = ["All", ...new Set(newVal)]);
+
+        if ( attr === "colors" ) {
+            newVal = newVal.flat();
+    }
+            return (newVal = ["All", ...new Set(newVal)]);
     };
 
 
@@ -22,6 +26,7 @@ const FilterSection = () => {
 
     const categoryData = getUniqueDate(all_products, "category");
     const companyData = getUniqueDate(all_products, "company");
+    const colorsData = getUniqueDate(all_products, "color");
 
     return (
         < Wrapper>
