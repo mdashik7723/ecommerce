@@ -6,7 +6,7 @@ import FormatPrice from "../Helpers/FormatPrice";
 
 const FilterSection = () => {
     const {
-        filters: {text, category, color,},
+        filters: {text, category, color, price, maxPrice, minPrice},
         updateFilterValue,
         all_products,
     } = useFilterContext();
@@ -120,6 +120,18 @@ const FilterSection = () => {
                     })}
                 </div>
             </div>
+
+            <div className="filter_price">
+                <h3>Price</h3>
+                <> <FormatPrice price={price}></FormatPrice></>
+                <input
+                    type="range"
+                    name="price"
+                    min={minPrice}
+                    max={maxPrice}
+                    value={price}
+                    onChange={updateFilterValue}/>
+            </div>
         </Wrapper>
     );
 };
@@ -132,7 +144,7 @@ const Wrapper = styled.section`
 
   h3 {
     padding: 2rem 0;
-    //font-size: bold;
+    font-size: bold;
   }
 
   .filter-search {
