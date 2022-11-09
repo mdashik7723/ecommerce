@@ -5,6 +5,7 @@ import reducer from "../reducer/cartReducer";
 const CartContext = createContext();
 
 const initialState = {
+
     cart: [],
     total_item: "",
     total_amount: "",
