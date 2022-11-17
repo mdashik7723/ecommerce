@@ -4,8 +4,6 @@ import styled from "styled-components";
 import {FiShoppingCart} from "react-icons/fi";
 import {CgMenu, CgClose} from "react-icons/cg";
 
-
-
 const Nav = () => {
     const [menuIcon, setMenuIcon] = useState();
 
