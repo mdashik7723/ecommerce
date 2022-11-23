@@ -17,7 +17,7 @@ const Cart = () => {
         );
     }
 
-    return (
+  return (
         <Wrapper>
             <div className="container">
                 <div className="cart_heading grid grid-five-column">
