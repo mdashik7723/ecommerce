@@ -10,7 +10,6 @@ const About = () => {
     const data = {
         name: "AB E-Commerce",
     };
-
     return(
         <>
             {myName}
